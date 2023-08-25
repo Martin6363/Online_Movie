@@ -1,0 +1,33 @@
+.movie_list {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(90deg, #16142B 20%, #100F1F, #16142B 20%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+    padding-top: 20px;
+}
+
+
+.list_cards {
+    margin-top: 50px;
+    width: 95%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+    flex-grow: 2;
+}
+
+.list_title {
+    margin-top: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #aeaeae;
+    padding: 10px;
+    color: #fff;
+}

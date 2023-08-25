@@ -1,0 +1,152 @@
+@mixin posterImageOverlay {
+    position: absolute;
+    padding: 5em;
+    bottom: 0;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: flex-start;
+    background-image: linear-gradient(rgb(0, 0, 0, 0), rgb(0, 0, 0, 1));
+    opacity: 1;
+    transition: opacity .3s;
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+
+.posterImage_overlay {
+    @include posterImageOverlay;
+}
+
+@mixin posterImageTitle {
+    font-weight: 900;
+    font-size: 4rem;
+    margin-bottom: 0.4rem;
+    text-align: left;
+    color: #fff;
+}
+
+.posterImage_title {
+    @include posterImageTitle;
+}
+
+@mixin posterImageRuntime {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+
+@mixin posterImageDescription {
+    font-style: italic;
+    font-size: 1rem;
+    color: #f2f2f2;
+}
+
+.movie_link {
+    width: 100%;
+    height: 100%;
+}
+
+.carousel_container {
+    max-height: 300px;
+    background-color: #333;
+}
+
+.carousel {
+    width: 100% !important;
+}
+
+.posterImage {
+    width: 100%;
+    height: 600px;
+}
+
+.posterImage img {
+    margin: auto;
+    display: block;
+    width: 100%;
+}
+
+.posterImage_overlay {
+    position: absolute;
+    padding: 5em;
+    bottom: 0;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: flex-start;
+    background-image: linear-gradient(rgb(0, 0, 0, 0), rgb(0, 0, 0, 1));
+    opacity: 1;
+    transition: opacity .3s;
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+.posterImage_title {
+    @include posterImageTitle;
+}
+
+.posterImage_runtime {
+    @include posterImageRuntime;
+}
+
+.posterImage_rating {
+    margin-left: 3rem;
+    color: #f1f1f1;
+}
+
+.posterImage_description {
+    @include posterImageDescription;
+}
+
+.star_rating {
+    color: rgb(212, 212, 0);
+}
+
+
+@media only screen and (max-width: 924px) {
+    .posterImage_title {
+        font-weight: 400;
+        font-size: 2rem;
+    }
+
+    .posterImage_overlay {
+        position: absolute;
+        bottom: 0;
+    }
+
+    .posterImage_runtime {
+        font-size: 1.5rem;
+    }
+
+    .posterImage {
+        height: 100%;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    .posterImage_description {
+        font-size: 0.5rem;
+    }
+
+    .posterImage {
+        height: 100%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .posterImage_title {
+        font-weight: 400;
+        font-size: 1rem;
+    }
+}

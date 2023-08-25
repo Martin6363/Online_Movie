@@ -1,0 +1,254 @@
+.movie {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.movie_container {
+    width: 90%;
+    filter: drop-shadow(5px 5px 10px #000);
+}
+
+.movie_intro {
+    width: 100%;
+    height: 300px;
+    position: relative;
+}
+
+.movie_backdrop {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.movie_detail {
+    transform: translateY(-50%);
+    display: flex;
+    align-items: start;
+    gap: 20px;
+    padding-left: 25px;
+}
+
+.movie_detailLeft {
+    width: 200px;
+}
+
+.movie_posterBox {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    filter: drop-shadow(5px 5px 15px #000);
+}
+
+.movie_poster {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+.movie_detailRightTop {
+    width: 100%;
+}
+
+.movie_detailRight {
+    max-width: 50%;
+    background-image: linear-gradient(rgb(0, 0, 0, 0.4) 50%, rgb(0, 0, 0, 0));
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.movie_name {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #fff;
+    text-shadow: 5px 5px 10px #000;
+}
+
+.movie_tagLine,
+.movie_rating,
+.movie_runtime,
+.movie_releaseData {
+    color: #fff;
+    margin-bottom: 5px;
+    display: flex;
+    gap: 5px;
+    font-size: 14px;
+}
+
+.movie_genres {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 5px;
+    color: #f2f2f2;
+}
+
+.movie_genre {
+    border: 3px solid #fff;
+    padding: 8px 6px;
+    border-radius: 45%;
+    font-size: 12px;
+}
+
+.movie_detailRightBottom {
+    margin-top: 5px;
+    color: #f2f2f2;
+}
+
+.synopsisText {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.movie_overview {
+    font-size: 12px;
+}
+
+.movie_links {
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.movie_heading {
+    font-size: 2rem;
+    color: #fff;
+}
+
+.link-pages{
+    width: 200px;
+    text-decoration: none;
+    border: 3px solid rgb(209, 0, 0);
+    padding: 10px 30px;
+    border-radius: 100px;
+    display: inline-block;
+    text-align: center;
+    overflow: hidden;
+    padding: 8px 25px 10px;
+    position: relative;
+    transition: all .2s ease-in-out; 
+    color: #fff;
+    z-index: 1;
+}
+
+.link-pages:hover, 
+.link-pages:focus {
+    color: #fff; 
+    transition: all .2s ease-in-out; 
+}
+
+.link-pages::before {
+    background: linear-gradient(#ca0f0fe1, #ff3030) -100px 0 no-repeat;
+    content: "";
+    display: inline-block;
+    height: 10em;
+    width: 200%;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: -30%;
+    -webkit-transform: skewX(-30deg) translateX(-80%);
+    -ms-transform: skewX(-30deg) translateX(-80%);
+    transform: skewX(-30deg) translateX(-80%); 
+    transition: opacity .75s ease-in-out, -webkit-transform 0s .85s;
+    transition: opacity .75s ease-in-out, -ms-transform 0s .85s;
+    transition: opacity .75s ease-in-out, transform 0s .85s; 
+    z-index: -1;
+}
+
+.link-pages:hover::before,
+.link-pages:focus::before {
+    opacity: 1;
+    -webkit-transform: skewX(-30deg) translateX(0);
+    -ms-transform: skewX(-30deg) translateX(0);
+    transform: skewX(-30deg) translateX(0); 
+    transition: -webkit-transform 1s ease-in-out;
+    transition: -ms-transform 1s ease-in-out;
+    transition: transform 1s ease-in-out; 
+}
+
+.link-pages:nth-child(3) {
+    color: yellow;
+    border: 3px solid yellow;
+}
+
+.production_text {
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    margin-top: 25px;
+    border-bottom: 1px solid #f2f2f2;
+    padding: 10px;
+}
+
+.movie_production {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 15px;
+    margin-top: 40px;
+    padding: 5px 0;
+    text-align: center;
+    color: #fff;
+    background-color: #262348b0;
+}
+
+.company_image_container {
+    width: 15%;
+    height: 75px;
+}
+
+.company_image_container .movie_productionImage {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    margin-bottom: 5px;
+}
+
+.trailer_movie {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.player_cont {
+    width: 50%;
+    height: 100%;
+}
+
+@media only screen and (max-width: 924px) {
+    .player_cont {
+        width: 100%;
+        width: 100%; 
+        height: 400px;
+        background-color: #000;
+    }
+
+    .movie_genres {
+        flex-wrap: wrap;
+    }
+    .movie_name  {
+        font-size: 1.5rem;
+    }  
+
+    .movie_heading {
+        font-size: 1rem;
+        color: #fff;
+    }
+
+    .link-pages {
+        width: 100%;
+    }
+}

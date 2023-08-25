@@ -1,0 +1,154 @@
+body {
+	font-family: sans-serif;
+}
+
+.signup-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: linear-gradient(90deg, #16142B 20%, #100F1F, #16142B 20%);
+}
+
+.signup_box {
+	position: relative;
+	width: 450px;
+	min-height: 75vh;
+	border-radius: 8px;
+	margin: 0 10px;
+	overflow: hidden;
+}
+
+.signup_form {
+	position: absolute;
+	inset: 4px;
+	background: rgba(52, 52, 52, 0.3);
+	padding: 50px 40px;
+	border-radius: 8px;
+	z-index: 2;
+	display: flex;
+	flex-direction: column;
+	font-family: initial;
+}
+
+.title {
+	position: absolute;
+	top: 6%;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 1000;
+	color: #fff;
+	text-align: center;
+	font-family: sans-serif;
+}
+
+.input_box {
+	position: relative;
+	width: 100%;
+	margin-top: 35px;
+}
+
+.input {
+	position: relative;
+	width: 100%;
+	padding: 8px 5px;
+	background: transparent;
+	border-bottom: 2px solid #fff;
+	border-right: none;
+	border-left: none;
+	border-top: none;
+	outline: none;
+	box-shadow: none;
+	color: #fff;
+	transition: 0.3s;
+	z-index: 10;
+}
+
+.input:focus ~ .span {
+	color: #fff;
+	left: 5px;
+}
+
+.span {
+	position: absolute;
+	top: -100%;
+	transform: translateY(-10%);
+	z-index: 100;
+	left: 0;
+	padding: 20px 0 10px;
+	pointer-events: none;
+	color: #8f8f8f;
+	font-size: 1em;
+	transition: 0.3s;
+}
+
+.links {
+	display: flex;
+	align-items: center;
+	justify-content: end;
+}
+
+.line {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 2px;
+	background: #fff;
+	border-radius: 4px;
+	overflow: hidden;
+	transition: 0.3s;
+	pointer-events: none;
+}
+
+.login-link {
+	margin: 10px 0;
+	font-size: 1em;
+	color: #8f8f8f;
+	text-decoration: none;
+	margin: 10px;
+	color: #fff;
+	&:hover {
+		opacity: 0.8;
+	}
+}
+
+.submit {
+	color: #000;
+	width: 100%;
+	outline: none;
+	border: none;
+	padding: 9px 25px;
+	background: #d1d1d1;
+	cursor: pointer;
+	border-radius: 4px;
+	font-size: 0.9em;
+	margin-top: 10px;
+	&:active {
+		background-color: #fff;
+	}
+}
+
+.input_box small {
+	position: absolute;
+	bottom: -50%;
+	left: 0;
+	color: #ff3333;
+	font-size: 13px;
+}
+
+.invalid {
+	position: relative;
+	width: 100%;
+	padding: 8px 5px;
+	background: transparent;
+	border-right: none;
+	border-left: none;
+	border-top: none;
+	outline: none;
+	box-shadow: none;
+	color: #fff;
+	transition: 0.3s;
+	z-index: 10;
+	border-bottom: 2px solid #ff3333;
+}

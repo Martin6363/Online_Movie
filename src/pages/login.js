@@ -41,7 +41,7 @@ export function Login() {
 
   return (
     <>
-        {/* <ParticleCustom/> */}
+        <ParticleCustom/>
         <div className="wrapper">
             <div className="image_box">
                 <div className="image_smoke">

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import '../../assets/styles/Header.scss';
 import { Link } from 'react-router-dom';
 import MovieLogo from "../../assets/images/Movie-Logo.png";

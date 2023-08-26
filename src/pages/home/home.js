@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar } from '@fortawesome/free-solid-svg-icons'; 
 import { MovieList } from '../../components/movieList/movieList';
-import { Header } from '../../components/header/Header';
+
 
 export function Home () {
     const dispatch = useDispatch();

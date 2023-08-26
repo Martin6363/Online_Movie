@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom';
 import { Trailer } from '../../components/trillerMovies/trailer';
 import { Comment } from '../../components/comments/comment';
 
+
 export function MovieDetails () {
     const [movieDetails, setMovieDetails] = useState();
     const { id } = useParams();

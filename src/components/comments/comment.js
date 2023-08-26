@@ -6,14 +6,15 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEllipsis } from '@fortawesome/free-solid-svg-icons';
 import EditComment from './editComment';
 import { format } from 'date-fns';
+import adminLogo from '../../assets/images/admin2.png';
 
 
 export function Comment () {
     const [comments, setComments] = useState([
-        { comment: "Hello", id: Math.random(), times: new Date() },
-        { comment: "Nice", id: Math.random(), times: new Date() },
-        { comment: "Good Movie", id: Math.random(), times: new Date() },
-        { comment: "Waow good", id: Math.random(), times: new Date() },
+        { comment: "Welcome to the Lego Movie website", id: Math.random(), times: new Date(), userImage: adminLogo, userName: 'Admin1 ✔' },
+        { comment: "Nice", id: Math.random(), times: new Date(), userImage: UserLogo, userName: 'User' },
+        { comment: "Good Movie", id: Math.random(), times: new Date(), userImage: UserLogo, userName: 'User' },
+        { comment: "Waow good", id: Math.random(), times: new Date(), userImage: UserLogo, userName: 'User' },
     ]);
     const [commentText, setCommentText] = useState("");
     const [focusTextarea, setFocusTextarea] = useState(false);
@@ -23,11 +24,15 @@ export function Comment () {
     const [editComment, setEditComment] = useState(-1);
 
     function handleAddComment() {
+        const newUserImage = userData.Username === 'Admin1' ? adminLogo : comments.userImage || UserLogo;
+        const newUserName = userData.Username === 'Admin1' ? userData.Username + " ✔" : userData.Username ? userData.Username : comments.userName;
         if (commentText.trim() !== '') {
             const newComment = {
                 comment: commentText,
                 id: Math.random(),
                 times: new Date(),
+                userImage: newUserImage,
+                userName: newUserName
             };
             setComments([...comments, newComment]);
             setCommentText('');
@@ -115,11 +120,11 @@ export function Comment () {
                         <div className="commentList" key={comment.id}>
                             <div className='user_comments'>
                                 <div className="comment_userImage">
-                                    <img src={UserLogo} alt="" />
+                                    <img src={comment.userImage} alt="" />
                                 </div>
                                 <div className='comment_text_cont'>
                                     <div className="comment_user">
-                                        <strong>{userData.Username || "User"}</strong>
+                                        <strong>{comment.userName || "User"}</strong>
                                         <p className="comment_times">
                                             {
                                                 comment.edited

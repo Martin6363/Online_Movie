@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom';
 import '../../assets/styles/movieList.scss';
-import React, { memo, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Card } from '../card/card';
 

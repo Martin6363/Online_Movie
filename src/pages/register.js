@@ -59,7 +59,7 @@ export function Signup() {
                         },
                     })}
                 />
-                <span className="span">Name</span>
+                <span className="span">Username</span>
                 <small>{errors.name && errors.name.message}</small>
             </div>
             <div className="input_box">

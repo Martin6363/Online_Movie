@@ -4,10 +4,11 @@ import { Link } from 'react-router-dom';
 import MovieLogo from "../../assets/images/Movie-Logo.png";
 import UserLogo from "../../assets/images/user.png"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRightFromBracket, faMagnifyingGlass, faRightFromBracket } from '@fortawesome/free-solid-svg-icons';
+import { faArrowRightFromBracket, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios';
 import { Card } from '../card/card';
 import { useSelector } from 'react-redux';
+import adminLogo from '../../assets/images/admin2.png'
 
 export function Header() {
   const [search, setSearch] = useState("");
@@ -59,15 +60,15 @@ export function Header() {
             </form>
             <div className="profile">
               <button className="user_profile" onClick={() => setProfile(!profile)}>
-                <img src={UserLogo} alt="" />
+                <img src={userData.Username === 'Admin1' ? adminLogo : UserLogo} alt="" />
               </button>
               { 
                 profile
                 ?
                   <div className="profile_data">
                     <div className="user_profile">
-                      <img src={UserLogo} alt="" />
-                      <strong>{userData.Username}</strong>
+                      <img src={userData.Username === 'Admin1' ? adminLogo : UserLogo} alt="" />
+                      <strong>{userData.Username || "User"}</strong>
                     </div>
                     <Link to={'/'} className='logout-link'><FontAwesomeIcon icon={faArrowRightFromBracket}/> Logout</Link>
                   </div>

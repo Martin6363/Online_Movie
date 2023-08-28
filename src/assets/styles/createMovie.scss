@@ -1,0 +1,154 @@
+.create_movie_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #494949;
+}
+  
+.container {
+    width: 50%;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+  
+.create_input_box,
+.input_file_box {
+    margin-bottom: 20px;
+  
+    input[type="text"],
+    input[type="file"],
+    textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+      transition: border-color 0.2s;
+    }
+  
+    input[type="text"]:focus,
+    input[type="file"]:focus,
+    textarea:focus {
+      border-color: #007bff;
+      outline: none;
+    }
+}
+  
+.input_file_box {
+    position: relative;
+    cursor: pointer;
+}
+  
+.custom-file-upload {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.2s;
+
+    .fa-upload {
+          font-size: 25px;
+          cursor: pointer;
+    }
+  }
+  
+input[type="file"] {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+}
+
+input[type="file"]:active ~ .custom-file-upload {
+    background-color: #5facff;
+}
+
+input[type="date"] {
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+  }
+
+
+input[type="date"]::placeholder {
+    color: #aaa;
+}
+
+input[type="date"]:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 5px #007BFF;
+}
+  
+
+textarea {
+    resize: vertical;
+}
+  
+.create-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 20px;
+    font-size: 18px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.create-btn:active {
+    background-color: #003c7c;
+}
+
+.chanel-btn {
+    background-color: #5a5a5a;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+
+    &:hover {
+        background-color: #464646;
+    }
+}
+
+.chanel-btn a {
+    text-decoration: none;
+    color: #fff;
+}
+  
+.dark-background {
+    .container {
+      background-color: #333;
+    }
+  
+    input[type="text"],
+    input[type="file"],
+    input[type="date"],
+    textarea {
+      background-color: #444; 
+      border-color: #555; 
+      color: #fff;
+    }
+}
+  

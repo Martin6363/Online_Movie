@@ -8,6 +8,7 @@ import { Header } from './components/header/Header';
 import { Home } from './pages/home/home';
 import { MovieList } from './components/movieList/movieList';
 import { MovieDetails } from './pages/movieDetails/movie';
+import { CreateMovie } from './pages/createMovie/createMovie';
 
 
 function App() {
@@ -38,7 +39,7 @@ function App() {
     )
   }
 
-  const shouldRenderHeader = !['/', '/register'].includes(location.pathname);
+  const shouldRenderHeader = !['/', '/register', '/movie/upload'].includes(location.pathname);
   return (
     <div className="App">
       {shouldRenderHeader && <Header />}
@@ -48,7 +49,8 @@ function App() {
         <Route path='/home' element={<Home/>}/>
         <Route path='/movie/:id' element={<MovieDetails/>}/>
         <Route path='/movies/:type' element={<MovieList/>}/>
-        <Route path='/*' element={<h1>Error page</h1>}/>
+        <Route path='/movie/upload' element={<CreateMovie/>}/>
+        <Route path='/*' element={<h1>Error 404</h1>}/>
       </Routes>
     </div>
   );

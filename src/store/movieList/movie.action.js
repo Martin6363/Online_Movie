@@ -2,7 +2,8 @@ import { GET_DATA,
     DELETE_DATA, 
     ADD_DATA, 
     ADD_USER_DATA,
-    GET_USER_DATA } from './movie.types';
+    GET_USER_DATA,
+    ADD_MOVIE} from './movie.types';
 
 
 
@@ -26,6 +27,14 @@ export function addData ( list ) {
         payload: list
     }
 }
+
+export function addMovie ( list ) {
+    return {
+        type: ADD_MOVIE,
+        payload: list
+    }
+}
+
 
 export function addUserData ( list ) {
     return {

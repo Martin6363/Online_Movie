@@ -8,7 +8,6 @@ import { faStar } from '@fortawesome/free-solid-svg-icons';
 
 export function Card ({movie}) {
     const [isLoading, setIsLoading] = useState(true);
-
     useEffect(() => {
         setTimeout(() => {
             setIsLoading(false);
@@ -28,7 +27,7 @@ export function Card ({movie}) {
             :
             <Link to={`/movie/${movie.id}`} style={{textDecoration: "none", color: "black"}}>
                 <div className="cards">
-                    <img src={`https://image.tmdb.org/t/p/original${movie ? movie.poster_path : ""}`} alt="" className="cards_img" />
+                    <img src={movie.poster_img ? movie.poster_img : `https://image.tmdb.org/t/p/original${movie ? movie.poster_path : ""}`} alt="" className="cards_img"/>
                     <div className="cards_overlay">
                         <div className="cards_title">{movie ? movie.original_title : ""}</div>
                         <div className="cards_runtime">

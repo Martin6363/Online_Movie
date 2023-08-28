@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import MovieLogo from "../../assets/images/Movie-Logo.png";
 import UserLogo from "../../assets/images/user.png"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRightFromBracket, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+import { faArrowRightFromBracket, faMagnifyingGlass, faPlus } from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios';
 import { Card } from '../card/card';
 import { useSelector } from 'react-redux';
@@ -70,6 +70,7 @@ export function Header() {
                       <img src={userData.Username === 'Admin1' ? adminLogo : UserLogo} alt="" />
                       <strong>{userData.Username || "User"}</strong>
                     </div>
+                    <Link to={'/movie/upload'} className='logout-link'><FontAwesomeIcon icon={faPlus}/> Add Movie</Link><br/><br/>
                     <Link to={'/'} className='logout-link'><FontAwesomeIcon icon={faArrowRightFromBracket}/> Logout</Link>
                   </div>
                 :

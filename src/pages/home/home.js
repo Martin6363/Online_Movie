@@ -13,11 +13,9 @@ import { MovieList } from '../../components/movieList/movieList';
 
 export function Home () {
     const dispatch = useDispatch();
-    const { movieData } = useSelector( store => ({
-        movieData: store.dataReducer.movieData
-    }) )
-    const [papular, setPapular] = useState([])
-
+    const { movieData } = useSelector((store) => ({
+        movieData: store.dataReducer.movieData,
+    }));
     useEffect(() => {
         const apiUrl = "https://api.themoviedb.org/3/movie/popular";
         const apiKey = "4e44d9029b1270a757cddc766a1bcb63";
@@ -30,9 +28,7 @@ export function Home () {
             }
         })
         .then((res) => {
-            const data = {...movieData, ...res.data.results}
-            dispatch(addData(data));
-            setPapular(res.data.results)
+            dispatch(addData(res.data.results));
         })
     }, [])
   return (
@@ -48,7 +44,7 @@ export function Home () {
                 showStatus={false}
             >
                 {
-                    papular.map((movie) => (
+                    movieData.map((movie) => (
                         <Link style={{textDecoration:"none", color:"black"}} to={`/movie/${movie.id}`} key={movie.id} className='movie_link'>
                             <div className='posterImage'>
                                 <img src={`https://image.tmdb.org/t/p/original/${movie && movie.backdrop_path}`} alt="" />

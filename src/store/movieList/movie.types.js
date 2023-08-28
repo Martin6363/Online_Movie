@@ -5,6 +5,8 @@ export const DELETE_DATA = 'DELETE_DATA'
 
 export const ADD_DATA = 'ADD_DATA' 
 
+export const ADD_MOVIE = 'ADD_MOVIE'
+
 // user data
 export const ADD_USER_DATA = "ADD_USER_DATA"
 

@@ -172,6 +172,22 @@
     padding: 10px;
     transform: translateY(100%);
     z-index: 100;
+    animation: toBottom .5s both;
+    overflow: hidden;
+    transition: .2s ease;
+}
+
+@keyframes toBottom {
+    0% {
+        height: 0px;
+    }
+
+    50% {
+        height: 145px;
+    }
+    100% {
+        height: auto;
+    }
 }
 
 .profile_data .logout-link {

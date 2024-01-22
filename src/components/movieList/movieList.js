@@ -22,7 +22,7 @@ export function MovieList() {
     }, [type])
 
     function getData () {
-        axios.get(`https://api.themoviedb.org/3/movie/${type || "now_playing"}?api_key=4e44d9029b1270a757cddc766a1bcb63&language=en-US`)
+        axios.get(`https://api.themoviedb.org/3/movie/${type ? type : "now_playing"}?api_key=4e44d9029b1270a757cddc766a1bcb63&language=en-US`)
         .then((res) => {
             const combinedData = [...movieLists, ...res.data.results];
             dispatch(addMovie(combinedData))

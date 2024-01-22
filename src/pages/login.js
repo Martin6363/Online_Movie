@@ -48,7 +48,7 @@ export function Login() {
                     <img src={dacoImage} alt=''/>
                 </div>
                 <div className="image_potter">
-                    <img src={harryPotter} alt=''/>
+                    <img draggable="false" src={harryPotter} alt=''/>
                 </div>
             </div>
             <div className="box">
@@ -58,7 +58,7 @@ export function Login() {
                         <input
                             className={`form__input ${errors.Username || (loginError && 'error') ? "error" : ""}`}
                             type="text" 
-                            title='Username' 
+                            title='Username'
                             {...register("Username", {
                                 required: true,
                                 validate: (value) => !!value.trim(),

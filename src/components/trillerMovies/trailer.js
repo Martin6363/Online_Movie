@@ -29,7 +29,6 @@ export function Trailer ({ movieId }) {
                         videoId={trailerKey} 
                         opts={{
                             width: '100%',
-                            // height: '100%',
                             playerVars: {
                                 autoplay: 1,
                                 controls: 1

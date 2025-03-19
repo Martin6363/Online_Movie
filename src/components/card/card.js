@@ -21,7 +21,7 @@ export function Card ({movie}) {
             ?
             <div className="cards">
                 <SkeletonTheme baseColor="#202020" highlightColor='#444'>
-                    <Skeleton width={200} height={300} duration={2}/>
+                    <Skeleton height={300} duration={2}/>
                 </SkeletonTheme>
             </div>
             :
